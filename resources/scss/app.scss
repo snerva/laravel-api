@@ -1,9 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-    font-size: .875rem;
-    background-color: #0d1117;
-    color: #f0f6fc;
+    font-size: 18px;
+    color: #333333;
+}
+
+header {
+    background-color: #111;
 }
 
 .feather {
@@ -16,6 +19,7 @@ body {
    */
 
 .sidebar {
+    background-color: #111;
     position: fixed;
     top: 0;
     /* rtl:raw:
@@ -40,6 +44,7 @@ body {
 
 .sidebar .nav-link {
     font-weight: 500;
+    font-size: 16px;
     color: #f0f6fc;
 }
 
@@ -54,12 +59,16 @@ body {
 }
 
 .sidebar-heading {
-    font-size: .75rem;
+    font-size: 18px;
 }
 
 /*
    * Navbar
    */
+
+.navbar .container-fluid {
+    width: 90%;
+}
 
 .navbar-brand {
     padding-top: .75rem;

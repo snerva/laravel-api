@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="heading p-4">
-    <h2>Types</h2>
+    <h2>Technologies</h2>
 </div>
 
 @include('partials.message')
@@ -10,10 +10,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col pe-5">
-            <form action="{{route('admin.types.store')}}" method="post"  enctype="multipart/form-data">
+            <form action="{{route('admin.technologies.store')}}" method="post"  enctype="multipart/form-data">
               @csrf
               <div class="input-group mb-3">
-                <input id="name" name="name" type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Types here" aria-label="Types name" aria-describedby="button-addon">
+                <input id="name" name="name" type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Techs here" aria-label="Techs name" aria-describedby="button-addon">
                 <button class="btn btn-outline-primary" type="button" id="button-addon">Add</button>
               </div>
             </form>
@@ -33,21 +33,21 @@
                         </tr>
                     </thead>
                     <tbody class="table-group-divider">
-                        @forelse($types as $type)
+                        @forelse($technologies as $technology)
                         <tr class="table-light">
-                            <td scope="row">{{$type->id}}</td>
+                            <td scope="row">{{$technology->id}}</td>
                             <td>
-                                <form action="{{route('admin.types.update', $type->slug)}}" method="post">
+                                <form action="{{route('admin.technologies.update', $technology->slug)}}" method="post">
                                     @csrf
                                     @method('PATCH')
-                                    <input type="text" name="name" id="name" class="form-control" value="{{$type->name}}">
-                                    <small>Press enter to update the type name</small>
+                                    <input type="text" name="name" id="name" class="form-control" value="{{$technology->name}}">
+                                    <small>Press enter to update the technology name</small>
                                 </form>
                             </td>
-                            <td>{{$type->slug}}</td>
-                            <td><span class="badge bg-secondary">{{count($type->projects)}}</span></td>
+                            <td>{{$technology->slug}}</td>
+                            <td><span class="badge bg-secondary">{{count($technology->projects)}}</span></td>
                             <td>
-                                <form action="{{route('admin.types.destroy', $type->slug)}}" method="post">
+                                <form action="{{route('admin.technologies.destroy', $technology->slug)}}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash fa-sm fa-fw"></i></button>

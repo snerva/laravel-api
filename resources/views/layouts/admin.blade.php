@@ -15,7 +15,10 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
@@ -23,9 +26,9 @@
 
 <body>
     <div id="app">
-        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow">
             <div class="container-fluid">
-                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Portfolio</a>
+                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Portfolio</a>
                 <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -59,7 +62,7 @@
 
         <div class="container-fluid">
             <div class="row">
-                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
                     <div class="position-sticky pt-3 sidebar-sticky">
                         <ul class="nav flex-column">
                             <li class="nav-item">
@@ -84,7 +87,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('admin.types.index')}}">
+                                <a class="nav-link" href="{{route('admin.technologies.index')}}">
                                     <span data-feather="file" class="align-text-bottom"></span>
                                     <i class="fas fa-pencil    "></i>
                                     Technologies
