@@ -3,7 +3,7 @@
 @section('content')
 <div class="heading d-flex justify-content-between align-items-center pt-4">
     <h2>Projects</h2>
-    <div><a href="{{route('admin.projects.create')}}" class="btn btn-outline-light"><i class="fas fa-plus    "></i></a></div>
+    <div><a href="{{route('admin.projects.create')}}" class="btn btn-outline-dark"><i class="fas fa-plus    "></i></a></div>
 </div>
 
 @include('partials.message')
@@ -35,7 +35,7 @@
                 <td>{{$project->slug}}</td>
                 <td>{{$project->description}}</td>
 
-                <td class="d-flex flex-column">
+                <td>
                     <a href="{{route('admin.projects.show', $project->slug)}}" class="btn btn-outline-primary view" role="button">
                         <i class="fas fa-eye"></i>
                     </a>
